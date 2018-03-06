@@ -2,7 +2,6 @@
  * @author      OA Wu <comdan66@gmail.com>
  * @copyright   Copyright (c) 2015 - 2018, OAF2E
  * @license     http://opensource.org/licenses/MIT  MIT License
- * @link        https://www.ioa.tw/
  */
 
 @import "_oa";
@@ -34,8 +33,53 @@ html {
     font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif, "微軟正黑體", "Microsoft JhengHei";
 
     background: $mainBackgroundColor;
-    background-image: $mainBackgroundImage;
+    background-image: url(../img/bg.jpg);
 
     @include font-smoothing(antialiased);
   }
 }
+
+
+
+#out_boxs {
+  display: inline-block;
+  width: 100%;
+  max-width: 640px;
+  background-color: rgba(255, 255, 255, 1.00);
+  @include box-shadow(inset 1px 1px 1px rgba(0, 0, 0, 0.1));
+
+
+  footer {
+    display: inline-block;
+    width: 100%;
+    background-color: rgba(59, 127, 195, 1.00);
+    padding: 25px 20px;
+
+    span {
+      display: inline-block;
+      width: 100%;
+      color: white;
+      font-size: 18px;
+
+      &:before {
+        display: inline-block;
+        content: '';
+        font-family: icomoon;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
