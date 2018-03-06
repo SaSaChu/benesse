@@ -328,7 +328,7 @@ html {
   }
 
   .open_boxs {
-    display: inline-block;
+    display: none;
 
     &.show {
       display: inline-block;
@@ -354,7 +354,6 @@ html {
     .open_num {
       display: inline-block;
       width: 100%;
-      background-color: rgba(0, 128, 0, 0.2);
 
       > div {
         display: inline-block;
@@ -367,17 +366,6 @@ html {
         background-repeat: no-repeat;
         background-position: center;
         position: relative;
-
-        @include range-width(0, 600px) {
-          width: calc(100% / 3 - 10px * 2 / 3);
-          height: 90px;
-          margin-top: 15px;
-          background-image: url(../img/doll_bg_s.png);
-
-          &:nth-child(3n+2) {
-            margin: 0 10px;
-          }
-        }
 
         &.ac_d {
           background-image: url(../img/doll_no.png);
@@ -400,15 +388,21 @@ html {
           }
         }
 
-        // d
-        border: 1px solid rgba(255, 0, 0, .3);
+        @include range-width(600px) {
+          &:nth-child(4n+2), &:nth-child(4n+3), &:nth-child(4n+4) {
+            margin-left: 10px;         
+          }
+        }
 
-        &:nth-child(4n+2), &:nth-child(4n+3), &:nth-child(4n+4) {
-          margin-left: 10px;   
+        @include range-width(0, 600px) {
+          width: calc(100% / 3 - 10px * 2 / 3);
+          height: 90px;
+          margin-top: 15px;
+          background-image: url(../img/doll_bg_s.png);
 
-          @include range-width(0, 600px) {
-            margin-left: 0;
-          }       
+          &:nth-child(3n+2) {
+            margin: 15px 10px 0 10px;
+          }
         }
 
         span {

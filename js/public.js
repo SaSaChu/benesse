@@ -6,8 +6,8 @@
  
 $(function () {
 
-  // $('.c_btn').click(function() {
-  //   $('.open_boxs').toggleClass('show');
-  // });
+  $('.c_btn').click(function() {
+    $('.open_boxs').toggleClass('show');
+  });
 
 });
